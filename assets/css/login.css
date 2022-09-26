@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body{
+  /* 噶度设为100vh可以沾满整个屏幕 */
+  height: 100%;
+  width: 100%;
+  background-image: url("/assets/images/infinity-14056516.jpg");
+  /* cover contain 区别 */
+  /* cover 以短边为准 */
+  /* contain 以长边为准 */
+  background-size: cover;
+
+}
+.login-reg-box{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 400px;
+  height: 320px;
+  background-color: rgba(255, 255, 255,0.5);
+}
+.login-reg-box p{
+  height: 60px;
+  /* 第一种 */
+  /* text-align: center;
+  line-height: 60px; */
+  /* 第二种 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-wrap{
+  display: none;
+}
+
