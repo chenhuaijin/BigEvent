@@ -7,8 +7,9 @@ $(function(){
 
   // 点击去登入
   $('#go2Login').on('click',function(){
-    $('.reg-wrap').hide()
+   
     $('.login-wrap').show()
+    $('.reg-wrap').hide()
   
   })
 })
