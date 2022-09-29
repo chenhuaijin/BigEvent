@@ -1,7 +1,8 @@
 .layui-footer{
   text-align:center;
   font-size: 18px;
-  width: 100%;
+  color: rgb(0, 0, 0) ;
+  /* width: 100%; */
   /* background-color: rgb(255, 194, 80) !important; */
 }
 /* .layui-layout-admin .layui-header{
