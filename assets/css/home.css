@@ -1,0 +1,21 @@
+.layui-footer{
+  text-align:center;
+  font-size: 18px;
+  width: 100%;
+  /* background-color: rgb(255, 194, 80) !important; */
+}
+/* .layui-layout-admin .layui-header{
+  background-color: rgb(255, 200, 80) !important;
+} */
+.layui-nav .layui-nav-item a {
+ color: rgb(255, 200, 80);
+}
+/* .layui-side-scroll{
+  display: none;
+}
+#w{
+  display: none;
+} */
+.layui-icon{
+  margin-left: 20px;
+}

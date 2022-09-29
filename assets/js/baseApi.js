@@ -12,6 +12,6 @@ $.ajaxPrefilter(function(config){
   config.contentType= 'application/json'
 
   //统一设置求的参数 -post 请求
-  
+
   
 })
