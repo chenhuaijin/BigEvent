@@ -15,6 +15,10 @@ body{
   background-size: cover;
 
 }
+.layui-main{
+   /* 倒影 */
+   -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0%, transparent), to(rgba(250, 250, 250, .2)));
+}
 .login-reg-box{
   position: absolute;
   top: 0;
@@ -26,6 +30,9 @@ body{
   height: 320px;
   background-color: rgba(255, 255, 255,0.5);
   border-radius: 15px;
+
+ 
+
 }
 .login-reg-box p{
   height: 60px;
@@ -45,10 +52,42 @@ body{
   padding: 0 35px;
   
 }
-.links{
+
+/* 注册居右 */
+/* .links{
   display: flex;
   justify-content:flex-end;
+} */
+
+.links{
+  text-align: right;
+
 }
 .links a{
   font-size: 12px;
 }
+/* .layui-form:nth-last-child(1){
+  text-align: right;
+  font-size: 12px;
+} */
+
+/* 小图标定位 */
+.layui-form-item{
+  /* 相对定位 */
+  position: relative;
+}
+.layui-icon{
+ /* 绝对定位 */
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.layui-input{
+  padding-left: 32px;
+}
+
+
+
+
+
