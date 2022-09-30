@@ -17,7 +17,7 @@ $(function(){
   })
 
 
-  // 封装一个把key=value 转成json格式的字符串
+//   // 封装一个把key=value 转成json格式的字符串
 const format2Json = (source) => {
   let rarget ={}
   source.split('&').forEach((item)=>{
@@ -83,8 +83,8 @@ $.ajax({
 //     password: $('#formReg [name=password]').val(),
 //     repassword:$('#formReg [name=repassword]').val()
 // }),
-    // data:format2Json($(this).serialize()),
-    data: format2Json($(this).serialize()),
+    data:format2Json($(this).serialize()),
+    // data: $(this).serialize(),
 success(res){
   //  console.log(res);
   if(res.code !== 0) return layer.msg(res.message)
@@ -108,7 +108,8 @@ success(res){
         method:'POST',
         url:`/api/login`,
         contentType:'application/json',
-        data: format2Json($(this).serialize()),
+        data:format2Json($(this).serialize()),
+        // data: $(this).serialize(),
         success(res){
           if(res.code !== 0) return layer.msg(res.message)
           // location.href = '/home.html'
