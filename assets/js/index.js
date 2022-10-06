@@ -2,6 +2,7 @@ $(function(){
 
   const layer = layui.layer
 
+function getUserInfo(){
   $.ajax({
     method:'GET',
     url:'/my/userinfo',
@@ -11,8 +12,9 @@ $(function(){
     success(res){
       // console.log(res);
       if(res.code !== 0) return layer.msg(res.message)
-
-      getUserInfo(res)
+  
+      renderAvatar(res)
+      // getUserInfo(res)
       // 按需渲染头像
       // if(res.data.user_pic){
       //   $('.text-head').hide()
@@ -26,17 +28,18 @@ $(function(){
       // }
       // $('.text').html(`欢迎&nbsp;$nbsp;${res.data.username}`)
     },
-  //  error(cpe){
-  //   console.log(cpe);
-  //     if(cpe.responseJSON?.code == 1 && cpe.responseJSON?.message =="身份认证失败！"){
-       
-  //       localStorage.clear()
-  //       location.href = '/home/login.html'
-  //     }
-  //   }
-  })
-
-
+    //  error(cpe){
+    //   console.log(cpe);
+    //     if(cpe.responseJSON?.code == 1 && cpe.responseJSON?.message =="身份认证失败！"){
+         
+    //       localStorage.clear()
+    //       location.href = '/home/login.html'
+    //     }
+    //   }
+    })
+  
+} 
+getUserInfo()
   // 实现退出操作
   $('#btn-logout').on('click',function(){
     // // console.log('object');
@@ -62,7 +65,7 @@ $(function(){
 
 )
   // 调用 getUserInfo 获取用户基本形象
-  function getUserInfo(user){
+  function renderAvatar(user){
     // 设置用户的昵称 
     // console.log(user);
     let name = user.data.nickname || user.data.username
@@ -81,3 +84,5 @@ $(function(){
       // console.log(first);
       $('.text-head').html(first).show()
   }}
+
+  // exports.say = getUserInfo()
