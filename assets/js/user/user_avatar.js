@@ -37,4 +37,28 @@ $(function () {
       .attr('src', newImgURL)  // 重新设置图片路径
       .cropper(options)        // 重新初始化裁剪区域
   })
+
+  // 为确定按钮添加点击事件
+  $('#btnUpload').on('click',function(){
+    var dataURL = $image
+      .cropper('getCroppedCanvas', { // 创建一个 Canvas 画布
+        width: 100,
+        height: 100
+      })
+      .toDataURL('image/png')       // 将 Canvas 画布上的内容，转化为 base64 格式的字符串
+// 请求接口
+      $.ajax({
+        method:'PATCH',
+        url:'/my/update/avatar',
+        data:JSON.stringify({avatar:dataURL}),
+        success(res){
+          if(res.code !== 0) return layer.msg('上传头像失败')
+          layer.msg('上传头像成功')
+          window.parent.getUserInfo()
+        }
+      })
+
+
+  })
+
 })

@@ -52,8 +52,8 @@ $(function(){
     method:'PUT',
     url:"/my/userinfo",
     // 携带想往服务器添加的的参数
-    data:form.val('formUserInfo'),
-    // data:JSON.stringify(form.val('formUserInfo')),
+    // data:form.val('formUserInfo'),
+    data:JSON.stringify(form.val('formUserInfo')),
     
     // data:$(this).serialize(),
     
