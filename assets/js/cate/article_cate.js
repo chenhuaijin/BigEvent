@@ -113,7 +113,7 @@ $(function () {
       method: "GET",
       url: `/my/cate/info?id=${id}`,
       success(res) {
-        console.log(res)
+       
         if (res.code !== 0) return layer.msg('获取详情失败')
         layer.msg('获取详情成功')
         // 快速为表单进行赋值
@@ -144,6 +144,7 @@ $(function () {
 
     }
   })
+
 
 
 })

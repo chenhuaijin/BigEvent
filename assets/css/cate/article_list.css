@@ -8,3 +8,14 @@ body{
   padding: 10px;
   background-color: #f2f3f5;
 }
+/* .layui-form{
+  display: flex;
+
+} */
+.layui-form-item{
+  margin-right: 10px;
+}
+.layui-form{
+  padding-top: 20px;
+  padding-right: 30px;
+}
